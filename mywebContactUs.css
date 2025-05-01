@@ -1,0 +1,105 @@
+/* General Styles */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background-color: #F5F5F5;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh; /* Ensures the body takes up full height */
+}
+
+/* Header Styles */
+header {
+    background-color: #8B5E3B;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+}
+
+/* Hero Section */
+.hero {
+    background: #FFF5E1;
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.hero h2 {
+    font-size: 2.5em;
+    color: #000;
+    font-family: 'Arial', sans-serif;
+    margin-top: 30px;
+}
+
+.hero p {
+    font-size: 1.2em;
+    color: #333;
+}
+
+/* Footer */
+footer {
+    background-color: #8B5E3B;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    width: 100%;
+    margin-top: auto; /* Ensures footer is pushed to the bottom */
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #8B5E3B; /* Brown color */
+    overflow: hidden;
+    padding: 15px;
+    text-align: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    padding: 14px 20px;
+    display: inline-block;
+    font-size: 18px;
+}
+
+.navbar a:hover, .navbar a.active {
+    background-color: #654321; /* Darker Brown */
+}
+
+/* Form Styling */
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+form label {
+    font-size: 1.1em;
+}
+
+form input, form textarea {
+    padding: 10px;
+    font-size: 1em;
+    width: 100%;
+    max-width: 400px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #8B5E3B;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #654321;
+}
+

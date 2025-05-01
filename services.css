@@ -1,0 +1,72 @@
+.services {
+  display: flex;
+  flex-direction: column;
+  align-items: center; /* Centers content horizontally */
+  justify-content: center; /* Centers content vertically */
+  padding: 40px 20px;
+  text-align: center; /* Centers text inside each service block */
+  background-color: #FFF5E1;
+  min-height: 100vh; /* Ensure it takes up full viewport height */
+}
+
+.services h2 {
+  font-size: 2.5em;
+  color: #8B5E3B;
+  margin-bottom: 40px;
+  font-family: 'Playfair Display', serif;
+}
+
+.service {
+  margin-bottom: 30px;
+  padding: 20px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 80%; /* Make the service blocks responsive */
+  max-width: 600px; /* Limit the width of each block */
+}
+
+.service h3 {
+  font-size: 1.8em;
+  color: #8B5E3B;
+  margin-bottom: 10px;
+}
+
+.service p {
+  font-size: 1.2em;
+  color: #555;
+  line-height: 1.5;
+  font-family: Arial, sans-serif;
+}
+
+/* General Styles for Header and Footer (if needed) */
+header {
+  background-color: #8B5E3B;
+  color: white;
+  padding: 20px 0;
+  text-align: center;
+}
+
+.navbar {
+  text-align: center;
+  background-color: #8B5E3B;
+  padding: 10px;
+}
+
+.navbar a {
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  display: inline-block;
+}
+
+.navbar a:hover {
+  background-color: #654321;
+}
+
+footer {
+  background-color: #8B5E3B;
+  color: white;
+  padding: 10px;
+  text-align: center;
+}

@@ -1,0 +1,126 @@
+/* General Styles */
+body {
+  margin: 0;
+  font-family: 'Georgia', serif;
+  background-color: #FFF5E1;
+  color: #333;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  padding: 20px 40px;
+  background-color: #8B5E3B;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.5em;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+}
+
+nav a {
+  text-decoration: none;
+  color: #333;
+}
+
+.hero {
+  display: flex;
+  padding: 40px;
+  gap: 40px;
+}
+
+.hero-text {
+  flex: 1;
+}
+
+.hero-text h1 {
+  font-size: 2.5em;
+  margin-bottom: 20px;
+}
+
+.hero-text p {
+  margin-bottom: 20px;
+}
+
+.buttons {
+  display: flex;
+  gap: 15px;
+}
+
+.btn {
+  padding: 10px 20px;
+  background-color: #8B5E3B;
+  color: white;
+  text-decoration: none;
+  border-radius: 5px;
+}
+
+.btn-secondary {
+  background-color: #8B5E3B;
+  border: 2px solid white;
+  color: white;
+}
+
+.hero-images {
+  display: flex;
+  gap: 20px;
+}
+
+.hero-images img {
+  width: 200px;
+  height: auto;
+  border-radius: 10px;
+}
+
+.instagram {
+  background-color:  #8B5E3B;  
+  color: white;
+  padding: 40px;
+  text-align: center;
+}
+
+.instagram-gallery {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.instagram-gallery img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.planning {
+  padding: 40px;
+  text-align: center;
+}
+/* Navigation Bar */
+        .navbar {
+            background-color: #8B5E3B; /* Brown color */
+            overflow: hidden;
+            padding: 15px;
+            text-align: center;
+        }
+
+        .navbar a {
+            color: white;
+            text-decoration: none;
+            padding: 14px 20px;
+            display: inline-block;
+            font-size: 18px;
+        }
+
+        .navbar a:hover, .navbar a.active {
+            background-color: #654321; /* Darker Brown */
+
+
+

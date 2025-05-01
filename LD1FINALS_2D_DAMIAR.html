@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login</title>
+  <style>
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: Arial, sans-serif;
+      background: url('Imagebg.jpg') no-repeat center center fixed;
+      background-size: cover;
+      display: flex;
+      flex-direction: column;
+      min-height: 100vh;
+    }
+
+    header {
+      background-color: #8B5E3B;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    .navbar {
+      background-color: #8B5E3B;
+      overflow: hidden;
+      padding: 15px;
+      text-align: center;
+    }
+
+    .navbar a {
+      color: white;
+      text-decoration: none;
+      padding: 14px 20px;
+      display: inline-block;
+      font-size: 18px;
+    }
+
+    .navbar a:hover,
+    .navbar a.active {
+      background-color: #654321;
+    }
+
+    main {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .login-container {
+      width: 100%;
+      max-width: 500px;
+      padding: 30px;
+      background-color: rgba(255, 255, 255, 0.9);
+      border-radius: 8px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .login-container h2 {
+      text-align: center;
+      font-family: 'Georgia', serif;
+      color: #987554;
+      font-size: 30px;
+    }
+
+    .login-container input {
+      width: 100%;
+      padding: 10px;
+      margin: 10px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+      font-size: 16px;
+    }
+
+    .login-container button {
+      width: 100%;
+      padding: 10px;
+      background-color: #987554;
+      color: white;
+      border: none;
+      border-radius: 10px;
+      cursor: pointer;
+      font-size: 16px;
+      margin-top: 10px;
+    }
+
+    .login-container button:disabled {
+      background-color: #ccc;
+    }
+
+    .error-message {
+      color: red;
+      text-align: center;
+    }
+
+    .login-container input:focus,
+    .login-container button:focus {
+      outline: none;
+      border-color: #6f4f29;
+    }
+
+    footer {
+      background-color: #8B5E3B;
+      color: black;
+      text-align: center;
+      padding: 10px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>Dream Bridal Wedding</h1>
+    <div class="navbar">
+      <a href="web.html">Home</a>
+      <a href="mywebAboutUsPage.html">About Us</a>
+      <a href="mywebCategoriesPage.html">Categories</a>
+      <a href="mywebContactUs.html">Contact</a>
+      <a href="LD1FINALS_2D_DAMIAR.html">Log In</a>
+       <a href="register.html">Register</a>
+    </div>
+  </header>
+
+  <main>
+    <div class="login-container">
+      <h2>Welcome to Dream Bridal Wedding</h2>
+      <div class="error-message" id="error-message"></div>
+      <input type="text" id="username" placeholder="Username" required>
+      <input type="password" id="password" placeholder="Password" required>
+      <button id="login-btn" onclick="attemptLogin()">Login</button>
+    </div>
+  </main>
+
+  <footer>
+    &copy; 2025 Dream Bridal Wedding. All rights reserved.
+  </footer>
+
+  <script>
+    let loginAttempts = 0;
+    let lockTimer = null;
+    const maxAttempts = 1;
+
+    function attemptLogin() {
+      const username = document.getElementById('username').value;
+      const password = document.getElementById('password').value;
+      const errorMessage = document.getElementById('error-message');
+      const loginButton = document.getElementById('login-btn');
+
+      const correctUsername = "admin123";
+      const correctPassword = "admin123";
+
+      if (lockTimer) {
+        errorMessage.textContent = "Too many failed attempts. Please wait 10 seconds.";
+        return;
+      }
+
+      if (username === correctUsername && password === correctPassword) {
+        window.location.href = "web.html";
+      } else {
+        loginAttempts++;
+        if (loginAttempts >= maxAttempts) {
+          errorMessage.textContent = "Incorrect username or password. Please wait 10 seconds.";
+          loginButton.disabled = true;
+
+          lockTimer = setTimeout(() => {
+            loginAttempts = 0;
+            loginButton.disabled = false;
+            errorMessage.textContent = "";
+            lockTimer = null;
+          }, 10000);
+        } else {
+          errorMessage.textContent = "Incorrect username or password.";
+        }
+      }
+    }
+  </script>
+
+</body>
+</html>
